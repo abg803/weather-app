@@ -1,4 +1,149 @@
+.weather-app {
+  max-width: 626px;
+  border: 1px solid black;
+  padding: 35px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 60px;
+  box-shadow: 12px 12px 2px 1px tomato;
+}
+.currentWeather {
+  padding: 20px;
+  background: rgb(252, 247, 247);
+  height: 183px;
+  width: 340px;
+}
+
+.locationTime {
+  max-height: 100%;
+  font-size: 56px;
+  line-height: 1;
+  text-align: right;
+  padding-right: 25px;
+  border-right: 1px solid black;
+}
+
+form {
+  width: 180px;
+  font-size: 13px;
+}
+
+input {
+  color: white;
+  background: black;
+  border-radius: 0;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 8px;
+  transition: all 200ms ease;
+}
+[type="search"] {
+  outline-offset: -160px;
+}
+#current-location-button {
+  background: white;
+  border-radius: 0;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 3px 6px 3px 6px;
+  transition: all 200ms ease;
+}
+
+.locationInput {
+  background: white;
+  color: tomato;
+  border: 1px solid black;
+  border-radius: 0;
+  width: 180px;
+}
+input:hover,
+input:active {
+  background: white;
+  color: tomato;
+  border: 1px solid black;
+  border-radius: 0;
+}
+#current-location-button:hover {
+  background: black;
+  border: 1px solid black;
+  border-radius: 0;
+}
+
+.temperature {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.otherWeatherDetails {
+  margin-top: 15px;
+  padding-top: 20px;
+  border-top: 1px solid black;
+}
+
+.units {
+  font-size: 16px;
+  line-height: 1;
+  position: relative;
+  top: -28px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(135, 135, 135);
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: tomato;
+}
+
 h1 {
+  font-size: 20px;
+  margin: 5px 0 5px 0;
+  text-transform: capitalize;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 0;
+}
+li,
+h2 {
+  font-size: 13px;
+  list-style: none;
+  line-height: 1.1;
+  font-weight: 200;
+  color: rgb(135, 135, 135);
+}
+
+.card-group {
+  padding-top: 20px;
   text-align: center;
-  color: red;
+}
+
+.day {
+  font-size: 14px;
+  color: tomato;
+  font-weight: 700;
+}
+
+.icon {
+  font-size: 28px;
+}
+
+.degrees {
+  font-size: 13px;
+}
+
+.low {
+  color: rgb(135, 135, 135);
+}
+
+.card {
+  border: none;
+}
+.list-group-item {
+  border: none;
 }
