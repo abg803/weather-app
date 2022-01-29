@@ -118,6 +118,18 @@ h2 {
   color: rgb(135, 135, 135);
 }
 
+p {
+  font-size: 13px;
+  opacity: 0.7;
+  text-align: center;
+  font-family: monospace;
+  display: block;
+  margin-block-start: 16px;
+  margin-block-end: 16px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 .card-group {
   padding-top: 20px;
   text-align: center;
