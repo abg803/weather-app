@@ -29,7 +29,7 @@
   font-weight: 400;
 }
 .locationTime .fas.fa-cloud {
-  color: #f0f0f0;
+  color: #fbfafa;
 }
 .otherWeatherDetails {
   margin-top: 15px;
@@ -65,7 +65,7 @@ input {
 
 .locationInput {
   background: #fdfdfd;
-  color: #0#035bdd04cbf;
+  color: #0041ff;
   border: 1px solid #0c0c0c;
   border-radius: 0;
   width: 180px;
@@ -73,7 +73,7 @@ input {
 input:hover,
 input:active {
   background: #fdfdfd;
-  color: #035bdd;
+  color: #0041ff;
   border: 1px solid #0c0c0c;
   border-radius: 0;
 }
@@ -103,7 +103,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #035bdd;
+  color: #0041ff;
   font-weight: bolder;
 }
 
@@ -111,7 +111,7 @@ h1 {
   font-size: 20px;
   margin: 5px 0 5px 0;
   text-transform: capitalize;
-  color: #035bdd;
+  color: #0041ff;
 }
 
 ul {
@@ -143,8 +143,8 @@ p {
 
 
 .day {
-  font-size: 14px;
-  color: #e30202;
+  font-size: 16px;
+  color: #ff0000;
   font-weight: 700;
 }
 
