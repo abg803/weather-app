@@ -1,17 +1,19 @@
 .weather-app {
   max-width: 626px;
-  border: 1px solid black;
+  border: 1px solid #0c0c0c;
   padding: 35px;
   display: block;
   margin: 0 auto;
   margin-top: 60px;
-  box-shadow: 12px 12px 2px 1px tomato;
+  /* box-shadow: 12px 12px 2px 1px #004cbf; */
+  background: #f5f5f5;
 }
 .currentWeather {
   padding: 20px;
-  background: rgb(252, 247, 247);
+  background: #ffc107;
   height: 183px;
   width: 340px;
+  font-weight: 100;
 }
 
 .locationTime {
@@ -21,7 +23,18 @@
   line-height: 1;
   text-align: right;
   padding-right: 25px;
-  border-right: 1px solid black;
+  border-right: 1px solid #0c0c0c;
+}
+#description {
+  font-weight: 400;
+}
+.locationTime .fas.fa-cloud {
+  color: #f0f0f0;
+}
+.otherWeatherDetails {
+  margin-top: 15px;
+  padding-top: 13px;
+  border-top: 1px solid #0c0c0c;
 }
 
 form {
@@ -30,10 +43,10 @@ form {
 }
 
 input {
-  color: white;
-  background: black;
+  color: #f5f5f5;
+  background: #0c0c0c;
   border-radius: 0;
-  border: 1px solid black;
+  border: 1px solid #0c0c0c;
   margin-bottom: 10px;
   padding: 8px;
   transition: all 200ms ease;
@@ -42,43 +55,37 @@ input {
   outline-offset: -160px;
 }
 #current-location-button {
-  background: white;
+  background: #f5f5f5;
   border-radius: 0;
-  border: 1px solid black;
+  border: 1px solid #0c0c0c;
   margin-bottom: 10px;
   padding: 3px 6px 3px 6px;
   transition: all 200ms ease;
 }
 
 .locationInput {
-  background: white;
-  color: tomato;
-  border: 1px solid black;
+  background: #fdfdfd;
+  color: #004cbf;
+  border: 1px solid #0c0c0c;
   border-radius: 0;
   width: 180px;
 }
 input:hover,
 input:active {
-  background: white;
-  color: tomato;
-  border: 1px solid black;
+  background: #fdfdfd;
+  color: #004cbf;
+  border: 1px solid #0c0c0c;
   border-radius: 0;
 }
 #current-location-button:hover {
-  background: black;
-  border: 1px solid black;
+  background: #0c0c0c;
+  border: 1px solid #0c0c0c;
   border-radius: 0;
 }
 
 .temperature {
   font-size: 56px;
   line-height: 1;
-}
-
-.otherWeatherDetails {
-  margin-top: 15px;
-  padding-top: 20px;
-  border-top: 1px solid black;
 }
 
 .units {
@@ -90,19 +97,20 @@ input:active {
 
 a {
   text-decoration: none;
-  color: rgb(135, 135, 135);
+  color: rgb(48 48 48);
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: tomato;
+  color: #004cbf;
 }
 
 h1 {
   font-size: 20px;
   margin: 5px 0 5px 0;
   text-transform: capitalize;
+  color: #004cbf;
 }
 
 ul {
@@ -112,11 +120,11 @@ ul {
 }
 li,
 h2 {
-  font-size: 13px;
+  font-size: 15px;
   list-style: none;
-  line-height: 1.1;
+  line-height: 1.3;
   font-weight: 200;
-  color: rgb(135, 135, 135);
+  color: #0c0c0c;
 }
 
 p {
@@ -131,14 +139,11 @@ p {
   margin-inline-end: 0px;
 }
 
-.card-group {
-  padding-top: 20px;
-  text-align: center;
-}
+
 
 .day {
   font-size: 14px;
-  color: tomato;
+  color: #e30202;
   font-weight: 700;
 }
 
@@ -159,4 +164,48 @@ p {
 }
 .list-group-item {
   border: none;
+  background: #f5f5f5;
 }
+
+.container-fluid {
+  padding-top: 20px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 23s linear infinite;
+  -webkit-animation: my-animation 23s linear infinite;
+  animation: my-animation 23s linear infinite;
+  white-space: nowrap;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
