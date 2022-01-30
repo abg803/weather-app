@@ -10,7 +10,7 @@
 }
 .currentWeather {
   padding: 20px;
-  background: #ffc107;
+  background: #ffe200;
   height: 183px;
   width: 340px;
   font-weight: 100;
@@ -65,7 +65,7 @@ input {
 
 .locationInput {
   background: #fdfdfd;
-  color: #004cbf;
+  color: #0#035bdd04cbf;
   border: 1px solid #0c0c0c;
   border-radius: 0;
   width: 180px;
@@ -73,7 +73,7 @@ input {
 input:hover,
 input:active {
   background: #fdfdfd;
-  color: #004cbf;
+  color: #035bdd;
   border: 1px solid #0c0c0c;
   border-radius: 0;
 }
@@ -103,7 +103,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #004cbf;
+  color: #035bdd;
   font-weight: bolder;
 }
 
@@ -111,7 +111,7 @@ h1 {
   font-size: 20px;
   margin: 5px 0 5px 0;
   text-transform: capitalize;
-  color: #004cbf;
+  color: #035bdd;
 }
 
 ul {
