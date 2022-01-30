@@ -18,7 +18,7 @@ function formatDate(date) {
   ];
   let day = days[date.getDay()];
 
-  return `${day} </br> ${hours}:${minutes}`;
+  return `${day} <strong>|</strong> ${hours}:${minutes}`;
 }
 
 function showWeather(response) {

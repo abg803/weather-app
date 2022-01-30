@@ -7,6 +7,7 @@
   margin-top: 60px;
   /* box-shadow: 12px 12px 2px 1px #004cbf; */
   background: #f5f5f5;
+  border-radius: 15px;
 }
 .currentWeather {
   padding: 20px;
@@ -14,13 +15,14 @@
   height: 183px;
   width: 340px;
   font-weight: 100;
+  border-radius: 15px;
 }
 
 .locationTime {
   max-height: 100%;
   min-height: 143px;
   font-size: 56px;
-  line-height: 1;
+  line-height: 1.2;
   text-align: right;
   padding-right: 25px;
   border-right: 1px solid #0c0c0c;
@@ -45,7 +47,7 @@ form {
 input {
   color: #f5f5f5;
   background: #0c0c0c;
-  border-radius: 0;
+  border-radius: 9px;
   border: 1px solid #0c0c0c;
   margin-bottom: 10px;
   padding: 8px;
@@ -56,7 +58,7 @@ input {
 }
 #current-location-button {
   background: #f5f5f5;
-  border-radius: 0;
+  border-radius: 9px;
   border: 1px solid #0c0c0c;
   margin-bottom: 10px;
   padding: 3px 6px 3px 6px;
@@ -67,7 +69,7 @@ input {
   background: #fdfdfd;
   color: #0041ff;
   border: 1px solid #0c0c0c;
-  border-radius: 0;
+  border-radius: 9px;
   width: 180px;
 }
 input:hover,
@@ -75,12 +77,12 @@ input:active {
   background: #fdfdfd;
   color: #0041ff;
   border: 1px solid #0c0c0c;
-  border-radius: 0;
+  border-radius: 9px;
 }
 #current-location-button:hover {
   background: #0c0c0c;
   border: 1px solid #0c0c0c;
-  border-radius: 0;
+  border-radius: 9px;
 }
 
 .temperature {
