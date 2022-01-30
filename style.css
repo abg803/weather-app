@@ -104,6 +104,7 @@ a:hover,
 a:active,
 a:focus {
   color: #004cbf;
+  font-weight: bolder;
 }
 
 h1 {
