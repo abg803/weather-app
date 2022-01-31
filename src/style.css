@@ -36,8 +36,9 @@
   text-transform: capitalize;
 }
 
-.locationTime .fas.fa-cloud {
+#icon {
   color: #fbfafa;
+  max-width: 100px;
 }
 .otherWeatherDetails {
   margin-top: 15px;
