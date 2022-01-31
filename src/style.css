@@ -31,6 +31,11 @@
 #description {
   font-weight: 400;
 }
+
+#description:first-letter {
+  text-transform: capitalize;
+}
+
 .locationTime .fas.fa-cloud {
   color: #fbfafa;
 }
