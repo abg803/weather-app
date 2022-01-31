@@ -21,8 +21,8 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <div class="row">
-          <div class="col-sm">
+        <div class="d-flex bd-highlight flex-wrap">
+          <div class= "p-2 flex-fill bd-highlight">
             <form class="search-form" id="search-form">
               <input 
               type="search" 
@@ -31,11 +31,13 @@
               id="location-input"
               class="locationInput"
               />
-              <input type="submit" value="Search"/>
+              <div class="d-flex align-items-start bd-highlight">
+                <input type="submit" value="Search"/>
+                <button id= "current-location-button">📍</button>
+              </div>
             </form>
-            <button id= "current-location-button">📍</button>
           </div>
-          <div class="col-md">
+          <div class="p-2 flex-fill bd-highlight">
             <section class="currentWeather" id="current-weather">
               <div class="row">
                 <div class="col-6">
@@ -60,7 +62,7 @@
         </div>
           <div class="container-fluid seven-day-forecast">
             <div class= "row flex-row flex-nowrap" id="scroll-text">
-              <div class= "col-sm">
+              <div class= "col-sm flex-shrink-1">
               <div class="card card-block">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item day">MON</li>
@@ -69,7 +71,7 @@
                 </ul>
                 </div>
             </div>
-              <div class= "col-sm">
+              <div class= "col-sm flex-shrink-1">
               <div class="card card-block">              
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item day">TUE</li>
@@ -78,7 +80,7 @@
               </ul>
               </div>
             </div>
-              <div class= "col-sm">
+              <div class= "col-sm flex-shrink-1">
               <div class="card card-block">              
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item day">WED</li>
@@ -87,7 +89,7 @@
               </ul>
               </div>
             </div>
-              <div class= "col-sm">
+              <div class= "col-sm flex-shrink-1">
               <div class="card card-block">              
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item day">THU</li>
@@ -96,7 +98,7 @@
               </ul>
               </div>
             </div>
-              <div class= "col-sm">
+              <div class= "col-sm flex-shrink-1">
               <div class="card card-block">              
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item day">FRI</li>
@@ -105,7 +107,7 @@
               </ul>
               </div>
             </div>
-              <div class= "col-sm">
+              <div class= "col-sm flex-shrink-1">
               <div class="card card-block">              
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item day">SAT</li>
@@ -114,7 +116,7 @@
               </ul>
               </div>
             </div>
-              <div class= "col-sm">
+              <div class= "col-sm flex-shrink-1">
               <div class="card card-block">              
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item day">SUN</li>
