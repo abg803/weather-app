@@ -94,6 +94,10 @@ input:active {
   border-radius: 9px;
 }
 
+.active {
+  color: #0041ff;
+  cursor: default;
+}
 .temperature {
   font-size: 56px;
   line-height: 1;

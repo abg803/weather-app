@@ -17,21 +17,21 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-
   return `${day} <font color= "#ff0000">|</font> ${hours}:${minutes}`;
 }
 
 function showWeather(response) {
+  farenheitTemperature = response.data.main.temp;
   document.querySelector("#location").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML =
+    Math.round(farenheitTemperature);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+
   document
     .querySelector("#icon")
     .setAttribute(
@@ -41,6 +41,8 @@ function showWeather(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
+
+  //getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -66,24 +68,31 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function convertToFarenheit(event) {
+function convertToCelsius(event) {
   event.preventDefault();
+  farenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  let celsiusTemperature = ((farenheitTemperature - 32) * 5) / 9;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-function convertToCelcius(event) {
+function convertToFarenheit(event) {
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
+  temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
+
+let farenheitTemperature = null;
 
 //change temperature
 let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", convertToFarenheit);
 
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", convertToCelcius);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
 
 //change date and time
 let dateElement = document.querySelector("#date");
