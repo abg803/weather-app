@@ -20,6 +20,24 @@ function formatDate(date) {
   return `${day} <font color= "#ff0000">|</font> ${hours}:${minutes}`;
 }
 
+/* function showForecast(response) {
+ document.querySelector("#forecast").innerHTML = response.data.daily;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 8) {
+      document.querySelector("#day").innerHTML= `${getDay(forecastDay.dt)}`;
+      document.querySelector("#forecastIcon").setAttribute("src", `http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png`);
+      document.querySelector("forecastIcon").setAttribute("alt", forecastDay.weather[0].description);
+      document.querySelector("#high").innerHTML= Math.round(forecastDay.temp.max);
+      document.querySelector("#low").innerHTML= Math.round(forecastDay.temp.min);
+  }
+
+function getForecast(coordinates) {
+  let apiKey = "eb052656b887b34b8aa3dfc39bd9f4fc";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/daily?lat=${coordinates.lat}&lon=${coordinates.lon}&cnt=7&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(showForecast);
+}
+ */
+
 function showWeather(response) {
   farenheitTemperature = response.data.main.temp;
   document.querySelector("#location").innerHTML = response.data.name;
