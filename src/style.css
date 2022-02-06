@@ -35,11 +35,11 @@
 #description:first-letter {
   text-transform: capitalize;
 }
-
+/* 
 #icon {
   color: #fbfafa;
   max-width: 100px;
-}
+} */
 .otherWeatherDetails {
   margin-top: 15px;
   padding-top: 13px;
@@ -161,15 +161,11 @@ p {
   font-weight: 700;
 }
 
-.icon {
-  font-size: 28px;
-}
-
 .degrees {
   font-size: 14px;
 }
 
-.low {
+#forecastTempMin {
   color: rgb(135, 135, 135);
 }
 

@@ -20,6 +20,41 @@ function formatDate(date) {
   return `${day} <font color= "#ff0000">|</font> ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"];
+  let forecastHTML = `
+  <div class="p-2 container-fluid seven-day-forecast" id="forecast">        
+  <div class="row flex-row flex-nowrap" id="scroll-text">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  
+           <div class="col-sm flex-shrink-1">
+             <div class="card card-block">
+               <ul class="list-group list-group-flush">
+                 <li class="list-group-item day" id="day">${day}</li>
+                 <li class="list-group-item icon" id="forecastIcon">
+                   <img
+                     src="http://openweathermap.org/img/wn/50d@2x.png"
+                     alt=""
+                     width="42"
+                   />
+                 </li>
+                 <li class="list-group-item degrees">
+                   <span id="forecastTempMax">51° </span>
+                   <span id="forecastTempMin">40°</span>
+                 </li>
+               </ul>
+             </div>
+           </div>
+         
+ `;
+  });
+  forecastHTML = forecastHTML + `</div></div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 /* function showForecast(response) {
  document.querySelector("#forecast").innerHTML = response.data.daily;
   forecast.forEach(function (forecastDay, index) {
@@ -127,3 +162,4 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New York");
+displayForecast();
