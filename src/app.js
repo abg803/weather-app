@@ -20,58 +20,64 @@ function formatDate(date) {
   return `${day} <font color= "#ff0000">|</font> ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let days = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"];
   let forecastHTML = `
   <div class="p-2 container-fluid seven-day-forecast" id="forecast">        
   <div class="row flex-row flex-nowrap" id="scroll-text">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-  
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
            <div class="col-sm flex-shrink-1">
              <div class="card card-block">
                <ul class="list-group list-group-flush">
-                 <li class="list-group-item day" id="day">${day}</li>
+                 <li class="list-group-item day" id="day">${formatDay(
+                   forecastDay.dt
+                 )}</li>
                  <li class="list-group-item icon" id="forecastIcon">
                    <img
-                     src="http://openweathermap.org/img/wn/50d@2x.png"
+                     src="http://openweathermap.org/img/wn/${
+                       forecastDay.weather[0].icon
+                     }@2x.png"
                      alt=""
-                     width="42"
+                     width="60"
                    />
                  </li>
                  <li class="list-group-item degrees">
-                   <span id="forecastTempMax">51° </span>
-                   <span id="forecastTempMin">40°</span>
+                   <span id="forecastTempMax">${Math.round(
+                     forecastDay.temp.max
+                   )}° </span>
+                   <span id="forecastTempMin">${Math.round(
+                     forecastDay.temp.min
+                   )}°</span>
                  </li>
                </ul>
              </div>
            </div>
          
  `;
+    }
   });
   forecastHTML = forecastHTML + `</div></div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-/* function showForecast(response) {
- document.querySelector("#forecast").innerHTML = response.data.daily;
-  forecast.forEach(function (forecastDay, index) {
-    if (index < 8) {
-      document.querySelector("#day").innerHTML= `${getDay(forecastDay.dt)}`;
-      document.querySelector("#forecastIcon").setAttribute("src", `http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png`);
-      document.querySelector("forecastIcon").setAttribute("alt", forecastDay.weather[0].description);
-      document.querySelector("#high").innerHTML= Math.round(forecastDay.temp.max);
-      document.querySelector("#low").innerHTML= Math.round(forecastDay.temp.min);
-  }
 
 function getForecast(coordinates) {
   let apiKey = "eb052656b887b34b8aa3dfc39bd9f4fc";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/daily?lat=${coordinates.lat}&lon=${coordinates.lon}&cnt=7&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(showForecast);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
 }
- */
 
 function showWeather(response) {
   farenheitTemperature = response.data.main.temp;
@@ -95,7 +101,7 @@ function showWeather(response) {
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
 
-  //getForecast(response.data.coord);
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -162,4 +168,3 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New York");
-displayForecast();
