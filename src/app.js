@@ -30,12 +30,12 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-  let forecastElement = document.querySelector("#forecast");
+  let forecastElement = document.querySelector("#forecast-container");
   let forecastHTML = `
   <div class="p-2 container-fluid seven-day-forecast" id="forecast">        
   <div class="row flex-row flex-nowrap" id="scroll-text">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 7) {
       forecastHTML =
         forecastHTML +
         `

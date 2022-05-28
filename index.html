@@ -24,7 +24,11 @@
   <body>
     <div class="container">
       <div class="weather-app">
+        
+        <!-- top section -->
         <div class="d-flex bd-highlight flex-wrap">
+
+          <!-- seacrch input -->
           <div class="p-2 flex-fill bd-highlight">
             <form class="search-form" id="search-form">
               <input
@@ -40,9 +44,13 @@
               </div>
             </form>
           </div>
+
+          <!-- current weather -->
           <div class="p-2 flex-fill bd-highlight">
             <section class="currentWeather" id="current-weather">
               <div class="row">
+                
+                <!-- first column -->
                 <div class="col-6">
                   <div class="locationTime">
                     <img src="" alt="" id="icon" />
@@ -50,8 +58,13 @@
                     <h2 id="date"></h2>
                   </div>
                 </div>
+
+                <!-- second column -->
                 <div class="col-6">
+                  
                   <span class="temperature" id="temperature"></span>
+                  
+                  <!-- temp conversion -->
                   <span class="units">
                     <a href="#" id="farenheit-link" class="active">°F</a> |<a
                       href="#"
@@ -59,37 +72,26 @@
                       >°C</a
                     >
                   </span>
+
                   <ul class="otherWeatherDetails">
                     <li id="description"></li>
                     <li>Humidity: <span id="humidity"></span>%</li>
                     <li>Wind: <span id="wind"></span> mph</li>
                   </ul>
+
                 </div>
+
+                
               </div>
             </section>
           </div>
         </div>
-        <div class="p-2 container-fluid seven-day-forecast" id="forecast">
-          <div class="row flex-row flex-nowrap" id="scroll-text">
-            <div class="col-sm flex-shrink-1">
-              <div class="card card-block">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item day" id="day">MON</li>
-                  <li class="list-group-item icon" id="forecastIcon">
-                    <img
-                      src="http://openweathermap.org/img/wn/50d@2x.png"
-                      alt=""
-                      width="42"
-                    />
-                  </li>
-                  <li class="list-group-item degrees">
-                    <span id="forecastTempMax">60° </span>
-                    <span id="forecastTempMin">20°</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+
+
+        <!-- bottom section -->
+        <!-- 7 day forecast -->
+        <div id="forecast-container">
+        
         </div>
       </div>
     </div>
